@@ -1,0 +1,27 @@
+
+:root {
+    --primary-color: #622121 ;
+    --secondary-color:  #A27035;
+    --background-color: #3b2409;
+    --text-color: #f0ebe9;
+    --text-secondary-color: #fff;
+    --button-color: #ab5018;
+  
+    /* Tipografía */
+    --font-family: 'Rubik, sans-serif';
+    --font-size-base: 1.2rem;
+    --font-size-large: 2.5rem;
+    --font-size-xlarge: 3.5rem;
+  
+    /* Espaciado */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+  
+    /* Bordes */
+    --border-radius: 5px;
+    --border-color: #DDCA7D;
+
+    --header-height: 90px;
+  }
+  
