@@ -37,7 +37,8 @@
 
 .submitButton {
   margin-top: 16px;
-  background-color: #1976d2;
+  background-color: rgb(59,36,9);
+  background: linear-gradient(225deg, rgba(59,36,9,1) 0%, rgba(97,33,33,1) 100%);
   color: white;
   padding: 10px 16px;
   width: 100%;
@@ -47,5 +48,5 @@
 }
 
 .submitButton:hover {
-  background-color: #115293;
+  background-color: rgb(41, 22, 1);
 }

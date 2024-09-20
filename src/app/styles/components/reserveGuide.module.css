@@ -1,0 +1,14 @@
+.body{
+    background-image: url('/images/imgGuide.jpg');
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
+    font-family: "Cantora One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    position: relative;
+}

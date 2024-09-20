@@ -25,13 +25,16 @@
 
 
 .logo {
-  width: 10%;
-  height: auto;
+  width: 20%;
+  height: 20%;
   margin-right: auto;
+  margin-bottom: auto;
 }
 
 .logo img{
   border-radius: 50%;
+  width: 100%;
+  height: auto;
 }
 
 .menuButton {
@@ -97,10 +100,9 @@
     align-items: center;
   }
 
-  .logo {
-    width: 15%;
+  .logo{
+    width: 10%;
     height: auto;
-    margin: 0px left;
-    margin-top: 90px;
+    margin: left;
   }
 }

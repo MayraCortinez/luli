@@ -1,13 +1,31 @@
+'use client';
+
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Modal from '@mui/material/Modal';
+import Fade from '@mui/material/Fade';
+import Backdrop from '@mui/material/Backdrop';
+import Box from '@mui/material/Box';
 import styles from '../styles/components/reservationModal.module.css';
 
+const modalStyle = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: '80%',
+  maxWidth: 500,
+  bgcolor: 'background.paper',
+  borderRadius: 8,
+  boxShadow: 24,
+  p: 4,
+};
 
-const ReservationForm = ({isOpen, onClose}) => {
+const ReservationModal = ({isOpen, onClose}) => {
   const { register, handleSubmit } = useForm();
   const [startDate, setStartDate] = useState(null);
 
@@ -29,7 +47,20 @@ const ReservationForm = ({isOpen, onClose}) => {
   if (!isOpen) return null;
 
   return (
-    <form className={styles.formContainer} onSubmit={handleSubmit(onSubmit)} onClick={onClose}>
+    <Modal
+      aria-labelledby="reservation-modal-title"
+      aria-describedby="reservation-modal-description"
+      open={isOpen}
+      onClose={onClose}
+      closeAfterTransition
+      BackdropComponent={Backdrop}
+      BackdropProps={{
+        timeout: 500,
+      }}
+    >
+       <Fade in={isOpen}>
+      
+    <form sx={modalStyle} className={styles.formContainer} onSubmit={handleSubmit(onSubmit)} onClick={onClose}>
       <div 
         onClick={(e) => e.stopPropagation()} // Evita cerrar el modal al hacer clic dentro del contenido
         className={styles.modalContent}
@@ -88,19 +119,21 @@ const ReservationForm = ({isOpen, onClose}) => {
         style={{ marginTop: '16px' }}
       />
       <Button
-        variant="contained"
-        color="primary"
-        type="submit"
-        fullWidth
-        style={{ marginTop: '16px' }}
-      >
-        Confirmar Reserva
-      </Button>
+              variant="contained"
+              color="primary"
+              type="submit"
+              fullWidth
+              style={{ marginTop: '16px' }}
+            >
+              Confirmar Reserva
+            </Button>
       </div>
     </form>
-    
+
+    </Fade>
+    </Modal>
       
   );
 };
 
-export default ReservationForm;
+export default ReservationModal;
