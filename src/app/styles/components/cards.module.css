@@ -11,9 +11,9 @@
         padding-left: 1rem;
         padding-right: 1rem;
         border-radius: 0.5rem;
-        background-color: var(--primary-color);
-        color: white;
-        opacity: 0.85;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        opacity: 0.75;
 }
 
 .buttonLabel:hover{

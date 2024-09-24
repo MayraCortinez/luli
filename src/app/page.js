@@ -13,8 +13,7 @@ export default function Home() {
       <Slider />
       <TextBanner />
       <Benefits />
-      <ImageListHome />
-      < Events />
+      <Events />
       <ReserveGuide />
     </div>
   );
