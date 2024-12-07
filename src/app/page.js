@@ -5,6 +5,7 @@ import Testimonials from "./components/Testimonials";
 import ReserveGuide from "./components/ReserveGuide";
 import RestaurantHero from "./components/RestaurantHero";
 import TextBanner from "./components/TextBanner";
+import Gallery from "./components/Gallery";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <TextBanner />
       <Events />
       <MenuHome />
+      <Gallery />
       <ReserveGuide />
       <Testimonials />
       <LocationMap />
