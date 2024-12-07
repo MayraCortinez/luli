@@ -19,7 +19,8 @@ html, body {
 
 body {
   line-height: 1.6; /* Espaciado para mejorar la legibilidad */
-  background-color: #f0f0f0; /* Color de fondo neutro */
+  background-color: #71591021; /* Color de fondo neutro */
+  margin: 0 auto;
 }
 
 a {
@@ -31,3 +32,39 @@ a:hover {
   color: var(--secondary-color);
 }
 
+.scroll-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.scroll-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #715810, #2c11116c); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  background-clip: text; 
+  text-fill-color: transparent; 
+}
+
+/* Definir la animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicar la animación a los elementos */
+.scroll-section {
+  animation: fadeIn 0.6s ease-out;
+  animation-timeline: scroll;
+}

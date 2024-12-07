@@ -26,8 +26,7 @@ function Benefits() {
 
   return (
     <>
-    <section className="  py-36 bg-[url('/images/bgFire2.jpg')] bg-fixed bg-cover relative z-10">
-    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-2"></div>
+    <section className=" bg-red-100/10 py-36">
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
         <Cards
           title="¡Escaparse al campo nunca fue tan fácil!"
@@ -52,7 +51,7 @@ function Benefits() {
         />
       </div>
     </section>
-    <section className="bg-[url('/images/bgWood3.jpg')] bg-fixed h-lvh bg-blend-hard-light bg-cover bg-center py-24">
+    <section className="bg-[url('/images/bgFire.jpg')] bg-cover bg-center py-24">
     <div className="container mx-auto px-4">
   
       {/* Beneficios Grid */}
@@ -61,9 +60,9 @@ function Benefits() {
         {benefits.map((benefit, index) => (
         <div 
         key={index}
-        className="p-6 bg-yellow-900/40 filter backdrop-blur-md backdrop-filter rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+        className="p-6 bg-yellow-900/10 filter backdrop-blur-md backdrop-filter rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
         >
-          <h3 className="text-xl font-semibold mb-4 h-1/3 text-orange-100">{benefit.title}</h3>
+          <h3 className="text-xl font-semibold mb-4 h-1/3 text-red-950">{benefit.title}</h3>
           <p className=" bg-yellow-950/50 text-white text-lg rounded-md p-4 h-2/3 items-center">
             {benefit.description}</p>
         </div>

@@ -120,10 +120,9 @@ const ReservationModal = ({isOpen, onClose}) => {
       />
       <Button
               variant="contained"
-              color="primary"
               type="submit"
               fullWidth
-              style={{ marginTop: '16px' }}
+              style={{ marginTop: '16px', backgroundColor: '#715810'}}
             >
               Confirmar Reserva
             </Button>

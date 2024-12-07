@@ -1,28 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Cantora+One&display=swap');
-
-.body{
-    background-image: url('/images/bg1.jpg');
-    background-position: 0%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 60vh;
-    font-weight: 400;
-    font-style: normal;
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Estonia&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Pacifico&family=Satisfy&display=swap');
+.text{
+    height: 70vh;
     position: relative;
     align-items: center;
     justify-content: center;
     display: flex;
+    flex-direction: column;
+    color: var(--button-color);
+    margin: auto;
+}
+
+.h3{
+    font-family: "Crimson Text", serif;
+  font-weight: 600;
+  font-style: italic;
+    line-height: 1.5;
 }
 
 
-.subtitle{
-    position: absolute;
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-    background-color: rgba(64, 21, 21, 0.321);
-    margin: 20px;
-    border-radius: 5px;
-    padding: 1rem;
+@keyframes grow {
+    0% {
+        font-size: 16px;
+    }
+    100% {
+        font-size: 64px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .text{
+        height: 90vh;
+    }
 }

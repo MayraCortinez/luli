@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
 .mySwiper {
   width: 100%; /* 100% del ancho de la ventana */
   height: 100vh; /* 100% de la altura de la ventana */
@@ -32,6 +34,7 @@
   z-index: 100; 
   padding: 40px;
   border-radius: var(--border-radius);
+  background-image: url('/images/bgtexture.jpg');
 }
 
 .slider-text h1 {
