@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useState } from 'react';
 import ReservationModal from './ReservationModal';
-import Button from '@mui/material/Button';
+
 
 const RestaurantHero = () => {
 
@@ -57,9 +57,9 @@ const RestaurantHero = () => {
           <p className="text-2xl md:text-3xl text-[#FFE4B5] mb-8 italic">
             Restaurante de Campo
           </p>
-          <Button className="bg-[#D2691E] text-white font-medium py-6 px-8 b-white text-lg hover:sc" onClick={handleOpenModal}>
+          <button className="bg-[#D2691E] text-white font-medium py-6 px-8 b-white text-lg hover:sc" onClick={handleOpenModal}>
           Reservar
-        </Button>
+        </button>
 
 
       {/* Modal para la reserva */}
