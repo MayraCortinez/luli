@@ -58,7 +58,7 @@ const RestaurantHero = () => {
             Restaurante de Campo
           </p>
           <button className="bg-[#D2691E] text-white font-medium rounded-lg py-6 px-8 b-white text-lg hover:sc" onClick={handleOpenModal}>
-          Reservar
+          RESERVAR
         </button>
 
 
