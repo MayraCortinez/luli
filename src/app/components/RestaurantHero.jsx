@@ -57,7 +57,7 @@ const RestaurantHero = () => {
           <p className="text-2xl md:text-3xl text-[#FFE4B5] mb-8 italic">
             Restaurante de Campo
           </p>
-          <button className="bg-[#D2691E] text-white font-medium rounded-lg py-6 px-8 b-white text-lg hover:sc" onClick={handleOpenModal}>
+          <button className="bg-[#D2691E]/80 text-white font-medium rounded-lg py-6 px-8 b-white text-lg hover:bg-[#D2691E]" onClick={handleOpenModal}>
           RESERVAR
         </button>
 

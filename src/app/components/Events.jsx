@@ -13,7 +13,7 @@ const Events = () => {
   };
 
   return (
-    <section id="restaurant" className="w-full flex justify-center place-items-center mx-auto py-12 md:py-24 lg:py-32 bg-gradient-to-r from-white/30 to-[#715810]/50">
+    <section id="restaurant" className="w-full flex justify-center place-items-center mx-auto px-4 md:p-2 py-12 md:py-24 lg:py-32 bg-gradient-to-r from-white/30 to-[#715810]/50">
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
           <div>
@@ -25,7 +25,7 @@ const Events = () => {
             </p>
             <div className="mt-6 flex flex-col gap-2 sm:flex-row">
               <Link
-                href="#"
+                href="#ubication"
                 className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-lg font-medium text-white shadow-xl hover:scale transition-colors bg-gradient-to-l from-[#715810]/50 to-[#715810]/70 hover:bg-[#715810]/70 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
               >
                 Conoce nuestra ubicación

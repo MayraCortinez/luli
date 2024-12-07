@@ -3,7 +3,7 @@ import React from 'react';
 function LocationMap() {
   return (
     <section className="bg-[url('/images/bgWood4.jpg')] bg-cover bg-center flex place-items-center justify-center relative" id="ubication" scroll-section>
-      <div className=" w-full p-48 mx-0 px-8 bg-[#311f0d] bg-opacity-85">
+      <div className=" w-full p-48 mx-0 px-8 bg-[#311f0d] bg-opacity-65">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl">
             Nuestra Ubicación

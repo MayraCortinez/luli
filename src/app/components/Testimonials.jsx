@@ -33,7 +33,7 @@ const Testimonials = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Container className="bg-[#F5F5DC] border-[#D2B48C]">
+              <Container className="bg-[#F5F5DC] border-[#D2B48C] shadow-lg rounded-lg shadow-[#715810]">
                 <div className="p-8">
                   <p className="text-lg mb-4 italic text-[#715810]">{testimonial.text}</p>
                   <div>

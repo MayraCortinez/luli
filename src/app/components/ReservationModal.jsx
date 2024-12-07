@@ -123,6 +123,7 @@ const ReservationModal = ({isOpen, onClose}) => {
               type="submit"
               fullWidth
               style={{ marginTop: '16px', backgroundColor: '#715810'}}
+              className='hover:bg-[#715810]/10'
             >
               Confirmar Reserva
             </Button>

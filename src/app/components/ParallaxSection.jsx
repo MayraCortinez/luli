@@ -11,7 +11,7 @@ const ParallaxSection = () => {
 
   return (
     <section className="relative h-screen bg-fixed bg-center bg-opacity-30 bg-cover bg-no-repeat bg-custom-radial" style={{ backgroundImage: "url('/images/bgTexture.jpg')"}}>
-      <div className="absolute inset-0 bg-[#715810] bg-opacity-30 flex flex-col md:flex-row items-center justify-center space-y-3 gap-4">
+      {/* <div className="absolute inset-0 bg-[#715810] bg-opacity-30 flex flex-col md:flex-row items-center justify-center space-y-3 gap-4"> */}
         <motion.div
           className="bg-white bg-opacity-80 rounded-lg shadow-lg p-6 w-80 text-center"
           initial="hidden"
@@ -63,7 +63,6 @@ const ParallaxSection = () => {
           <p className="text-gray-600 mb-4">Explora nuestro delicioso menú y sabores únicos.</p>
           <a href="#" className="text-[#715810] font-semibold hover:underline">Conoce nuestro menú</a>
         </motion.div>
-      </div>
     </section>
   );
 };

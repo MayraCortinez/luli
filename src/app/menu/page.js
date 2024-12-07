@@ -1,14 +1,12 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowUpCircle } from 'lucide-react';
+import { Home } from 'lucide-react';
 
 const MenuHome = () => {
-  const [showButton, setShowButton] = useState(false);
-
   const menuData = [
     {
       id: 'friday',
@@ -31,24 +29,13 @@ const MenuHome = () => {
     },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowButton(window.scrollY > 30);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 }
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const goToHome = () => {
+    window.location.href = "/#menu";
   };
 
   return (
@@ -154,16 +141,14 @@ const MenuHome = () => {
         ))}
       </section>
 
-      {/* Botón de scroll to top */}
-      {showButton && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-4 bg-[#622121] text-white rounded-full shadow-lg hover:bg-[#511a1a] transition-all"
-          aria-label="Scroll to top"
-        >
-          <ArrowUpCircle size={32} />
-        </button>
-      )}
+      {/* Botón de ir al Home */}
+      <button
+        onClick={goToHome}
+        className="fixed bottom-8 right-8 p-4 bg-[#622121] text-white rounded-full shadow-lg hover:bg-[#511a1a] transition-all z-50"
+        aria-label="Go to home"
+      >
+        <Home size={32} />
+      </button>
     </section>
   );
 };
