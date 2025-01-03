@@ -9,12 +9,12 @@ const Testimonials = () => {
     {
       text: '"Hermoso lugar típico, bien atendido."',
       author: "teamranelagh mtb",
-      role: "Opinión Google Maps",
+      role: "Opinión en Google Maps",
     },
     {
       text: '"Un lugar sencillo, familiar, donde se come muy lindo.Todo casero, muy fresco, atención agradable, volveremos!"',
       author: "Mandy Scaturro",
-      role: "Opinión Facebook",
+      role: "Opinión en Facebook",
     },
   ];
 
