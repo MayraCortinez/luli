@@ -25,7 +25,7 @@ function LocationMap() {
                   {/* Contact Info */}
         <div className="text-center mt-8 ">
           <div className="text-lg text-gray-200">¿Prefieres hacer una reserva por teléfono?<br /> Llámanos al <span className="font-bold text-red-100">+54 2346 531691</span></div>
-          <div className="mt-2 text-sm text-gray-100">Dirección: Ruta Nacional 5 (Km. 144), Gorostiaga, <br />Chivilcoy, Provincia de Buenos Aires, Argentina</div>
+          <div className="mt-2 text-sm text-gray-100">Dirección: Calles 11 de Septiembre y Los Ceibos, Ruta Nacional 5 (Km. 145), <br /> Gorostiaga, Chivilcoy, Provincia de Buenos Aires, Argentina</div>
         </div>
       </div>
         </div>

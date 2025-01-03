@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex space-x-6 mb-4 md:mb-0">
           {/* Botón de Facebook */}
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/profile.php?id=61563204295853"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center w-12 h-12 bg-[#F5F5DC] text-[#715810] rounded-full shadow-md hover:shadow-lg transition-transform transform hover:scale-105"
