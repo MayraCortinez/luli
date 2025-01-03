@@ -30,7 +30,7 @@ const ReservationModal = ({isOpen, onClose}) => {
   const [startDate, setStartDate] = useState(null);
 
   const onSubmit = (data) => {
-    const whatsappNumber = '5491178865748'; // Número del administrador
+    const whatsappNumber = '5492346508306 '; // Número del administrador
     const message = `Reserva confirmada para ${data.name}, ${data.people} personas el ${startDate?.toLocaleDateString()}. Comentarios: ${data.comments}`;
     
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;

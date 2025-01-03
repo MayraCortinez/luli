@@ -6,6 +6,7 @@ import ReserveGuide from "./components/ReserveGuide";
 import RestaurantHero from "./components/RestaurantHero";
 import TextBanner from "./components/TextBanner";
 import Gallery from "./components/Gallery";
+import Footer from "./components/Footer";
 
 
 export default function Home() {
@@ -15,10 +16,11 @@ export default function Home() {
       <TextBanner />
       <Events />
       <MenuHome />
-      <Gallery />
       <ReserveGuide />
+      <Gallery />
       <Testimonials />
       <LocationMap />
+      <Footer />
     </div>
   );
 }

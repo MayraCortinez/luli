@@ -7,14 +7,14 @@ import { motion } from "framer-motion";
 const Testimonials = () => {
   const testimonials = [
     {
-      text: "La comida es excepcional y el ambiente campestre es perfecto para escapar de la ciudad.",
-      author: "María González",
-      role: "Cliente Frecuente",
+      text: '"Hermoso lugar típico, bien atendido."',
+      author: "teamranelagh mtb",
+      role: "Opinión Google Maps",
     },
     {
-      text: "Un lugar mágico donde la naturaleza y la buena cocina se encuentran. ¡Volveremos pronto!",
-      author: "Carlos Rodríguez",
-      role: "Crítico Gastronómico",
+      text: '"Un lugar sencillo, familiar, donde se come muy lindo.Todo casero, muy fresco, atención agradable, volveremos!"',
+      author: "Mandy Scaturro",
+      role: "Opinión Facebook",
     },
   ];
 
@@ -33,7 +33,7 @@ const Testimonials = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Container className="bg-[#F5F5DC] border-[#D2B48C] shadow-lg rounded-lg shadow-[#715810]">
+              <Container className="bg-[#F5F5DC] border-[#D2B48C] shadow-md rounded-lg shadow-[#715810]/30">
                 <div className="p-8">
                   <p className="text-lg mb-4 italic text-[#715810]">{testimonial.text}</p>
                   <div>
