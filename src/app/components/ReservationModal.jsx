@@ -25,16 +25,16 @@ const modalStyle = {
   p: 4,
 };
 
-const ReservationModal = ({isOpen, onClose}) => {
+const ReservationModal = ({ isOpen, onClose }) => {
   const { register, handleSubmit } = useForm();
   const [startDate, setStartDate] = useState(null);
 
   const onSubmit = (data) => {
-    const whatsappNumber = '5492346508306 '; // Número del administrador
+    const whatsappNumber = '5492346508306'; // Número del administrador
     const message = `Reserva confirmada para ${data.name}, ${data.people} personas el ${startDate?.toLocaleDateString()}. Comentarios: ${data.comments}`;
-    
+
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-    
+
     window.open(whatsappUrl, '_blank'); // Abre WhatsApp en una nueva pestaña para enviar el mensaje
   };
 
@@ -58,81 +58,89 @@ const ReservationModal = ({isOpen, onClose}) => {
         timeout: 500,
       }}
     >
-       <Fade in={isOpen}>
-      
-    <form sx={modalStyle} className={styles.formContainer} onSubmit={handleSubmit(onSubmit)} onClick={onClose}>
-      <div 
-        onClick={(e) => e.stopPropagation()} // Evita cerrar el modal al hacer clic dentro del contenido
-        className={styles.modalContent}
-      >
+      <Fade in={isOpen}>
 
-      <button className={styles.closeButton} onClick={onClose}>
-          &times;
-      </button>
-      <h3> Reservar </h3>
-      <TextField
-        id="outlined-basic"
-        label="Nombre y Apellido"
-        variant="outlined"
-        {...register('name')}
-        fullWidth
-        required
-        className={styles.formField}
-        margin='normal'
-      />
-      <TextField
-        id="outlined-basic"
-        label="Cantidad de Personas"
-        variant="outlined"
-        type="number"
-        {...register('people')}
-        fullWidth
-        required
-        style={{ marginTop: '16px' }}
-      />
-      <label style={{ marginTop: '16px', display: 'block' }}>Fecha:</label>
-      <DatePicker
-        selected={startDate}
-        onChange={(date) => setStartDate(date)}
-        dateFormat="dd/MM/yyyy"
-        placeholderText="Seleccione una fecha"
-        filterDate={filterDays}
-        minDate={new Date()}
-        customInput={
-          <TextField
-            id="outlined-basic"
-            label="Día/Mes/Año"
-            variant="outlined"
-            fullWidth
-            style={{ marginTop: '16px'}}
-          />
-        }
-      />
-      <TextField
-        id="outlined-basic"
-        label="Comentarios"
-        variant="outlined"
-        {...register('comments')}
-        fullWidth
-        multiline
-        rows={4}
-        style={{ marginTop: '16px' }}
-      />
-      <Button
+        <form sx={modalStyle} className={styles.formContainer} onSubmit={handleSubmit(onSubmit)} onClick={onClose}>
+          <div
+            onClick={(e) => e.stopPropagation()} // Evita cerrar el modal al hacer clic dentro del contenido
+            className={styles.modalContent}
+          >
+
+            <button className={styles.closeButton} onClick={onClose}>
+              &times;
+            </button>
+            <h3> Reservar </h3>
+            <TextField
+              id="outlined-basic"
+              label="Nombre y Apellido"
+              variant="outlined"
+              {...register('name')}
+              fullWidth
+              required
+              className={styles.formField}
+              margin='normal'
+            />
+            <TextField
+              id="people"
+              select
+              label="Personas"
+              variant="outlined"
+              {...register('people')}
+              fullWidth
+              SelectProps={{
+                native: true,
+              }}
+            >
+              <option value=""></option>
+              {Array.from({ length: 20 }, (_, i) => (
+                <option key={i + 1} value={i + 1}>
+                  {i + 1}
+                </option>
+              ))}
+            </TextField>
+            <label style={{ marginTop: '16px', display: 'block' }}>Fecha:</label>
+            <DatePicker
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+              dateFormat="dd/MM/yyyy"
+              placeholderText="Seleccione una fecha"
+              filterDate={filterDays}
+              minDate={new Date()}
+              customInput={
+                <TextField
+                  id="outlined-basic"
+                  label="Día/Mes/Año"
+                  variant="outlined"
+                  fullWidth
+                  style={{ marginTop: '16px' }}
+                />
+              }
+            />
+            <TextField
+              id="outlined-basic"
+              label="Comentarios"
+              variant="outlined"
+              {...register('comments')}
+              fullWidth
+              multiline
+              rows={4}
+              style={{ marginTop: '16px' }}
+            />
+            <Button
               variant="contained"
               type="submit"
               fullWidth
-              style={{ marginTop: '16px', backgroundColor: '#715810'}}
+              style={{ marginTop: '16px', backgroundColor: '#715810' }}
               className='hover:bg-[#715810]/10'
             >
               Confirmar Reserva
             </Button>
-      </div>
-    </form>
+          </div>
+        </form>
 
-    </Fade>
+      </Fade>
     </Modal>
-      
+
   );
 };
 

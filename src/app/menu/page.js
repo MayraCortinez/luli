@@ -1,33 +1,55 @@
 'use client'
-
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Home } from 'lucide-react';
 
-const MenuHome = () => {
+const MenuPage = () => {
   const menuData = [
     {
-      id: 'friday',
-      title: 'Viernes',
-      items: ['Pizzas', 'Empanadas', 'Hamburguesas'],
+      id: 'fridaySundays',
+      title: 'Viernes y Domingos',
+      items: [
+        { name: 'Pizzas', description: 'Pizzas artesanales con masa casera, horneadas a la piedra y preparadas con ingredientes frescos del campo.' },
+        { name: 'Empanadas', description: 'Empanadas rellenas con cortes de carne local, verduras frescas y especias de la región.' },
+        { name: 'Hamburguesas', description: 'Jugosas hamburguesas elaboradas con carne de productores locales y pan artesanal.' },
+      ],
     },
     {
       id: 'saturday',
       title: 'Sábados - Parrilla Libre',
       categories: [
-        { title: 'Entradas', items: ['Chorizo', 'Morcilla', 'Provoleta'] },
-        { title: 'Carnes a la Parrilla', items: ['Asado', 'Vacío', 'Matambre'] },
-        { title: 'Postres', items: ['Helado', 'Flan', 'Ensalada de Frutas'] },
+        {
+          id: 'starters',
+          title: 'Entradas',
+          items: [
+            {  name: 'Picada', description: 'Selección de fiambres locales y quesos artesanales, ideal para compartir y disfrutar.' },
+            { name: 'Matambre', description: 'Matambre enrollado relleno con vegetales frescos, huevo y especias, cocido a fuego lento.' }
+          ],
+        },
+        {
+          id: 'main',
+          title: 'Carnes a la Parrilla',
+          items: [
+            { name: 'Asado', description: 'Tierno asado de carne local, cocido a fuego lento en nuestra parrilla de leña.' },
+            { name: 'Vacío', description: 'Vacío jugoso y sabroso, preparado con maestría y acompañado de chimichurri casero.' },
+            {name: 'Morcillas', description: 'Morcillas artesanales hechas con recetas familiares de la región.'}
+          ],
+        },
+        {
+          id:'desserts',
+          title: 'Postres',
+          items: [
+            { name: 'Helado', description: 'Una opción refrescante con sabores clásicos, perfecta para cerrar una comida con un toque dulce.' },
+            { name: 'Pastelitos', description: 'Crujientes pastelitos caseros, rellenos con dulce de batata o membrillo.' },
+          ],
+        },
       ],
-    },
-    {
-      id: 'sunday',
-      title: 'Domingos',
-      items: ['Pastel de Papa', 'Pollo al Horno', 'Tarta de Verduras'],
-    },
+    }
   ];
+  
+  
 
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -40,7 +62,7 @@ const MenuHome = () => {
 
   return (
     <section>
-      <section className="p-12 md:m-24 lg:m-32 rounded-xl py-12 bg-gradient-to-l from-[#715810]/30 to-transparent filter-none">
+      <section className="md:m-24 rounded-xl p-12 bg-gradient-to-l from-[#715810]/30 to-transparent filter-none">
         <motion.h2
           className="text-center text-4xl font-bold text-[#715810] mb-12"
           initial={{ opacity: 0, y: -50 }}
@@ -94,16 +116,16 @@ const MenuHome = () => {
                         variants={cardVariants}
                         transition={{ duration: 0.6, delay: index * 0.2 }}
                       >
-                        <Image
-                          src={`/menu${catIndex + 1}.jpg`}
-                          width={300}
-                          height={200}
-                          alt={item}
-                          className="w-full h-48 object-cover"
-                        />
+   <Image
+      src={`/images/${item.name.toLowerCase().replace(/ /g, '_')}.jpg`} 
+      width={300}
+      height={200}
+      alt={item.name}
+      className="w-full h-48 object-cover"
+    />
                         <div className="p-6">
-                          <h4 className="text-2xl font-semibold text-[#622121] mb-2">{item}</h4>
-                          <p className="text-[#622121]/90">Descripción deliciosa de {item.toLowerCase()}.</p>
+                          <h4 className="text-2xl font-semibold text-[#622121] mb-2">{item.name}</h4>
+                          <p className="text-[#622121]/90">{item.description}</p>
                         </div>
                       </motion.div>
                     ))}
@@ -122,16 +144,16 @@ const MenuHome = () => {
                     variants={cardVariants}
                     transition={{ duration: 0.6, delay: index * 0.2 }}
                   >
-                    <Image
-                      src="/menu2.jpg"
-                      width={300}
-                      height={200}
-                      alt={item}
-                      className="w-full h-48 object-cover"
-                    />
+   <Image
+      src={`/images/${item.name.toLowerCase().replace(/ /g, '_')}.jpg`} 
+      width={300}
+      height={200}
+      alt={item.name}
+      className="w-full h-48 object-cover"
+    />
                     <div className="p-6">
-                      <h4 className="text-2xl font-semibold text-[#622121] mb-2">{item}</h4>
-                      <p className="text-[#622121]/90">Descripción deliciosa de {item.toLowerCase()}.</p>
+                      <h4 className="text-2xl font-semibold text-[#622121] mb-2">{item.name}</h4>
+                      <p className="text-[#622121]/90">Descripción deliciosa de {item.name.toLowerCase()}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -153,4 +175,4 @@ const MenuHome = () => {
   );
 };
 
-export default MenuHome;
+export default MenuPage;
