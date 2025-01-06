@@ -8,12 +8,12 @@ import { Home } from 'lucide-react';
 const MenuPage = () => {
   const menuData = [
     {
-      id: 'fridaySundays',
+      id: 'friday',
       title: 'Viernes y Domingos',
       items: [
-        { name: 'Pizzas', description: 'Pizzas artesanales con masa casera, horneadas a la piedra y preparadas con ingredientes frescos del campo.' },
-        { name: 'Empanadas', description: 'Empanadas rellenas con cortes de carne local, verduras frescas y especias de la región.' },
-        { name: 'Hamburguesas', description: 'Jugosas hamburguesas elaboradas con carne de productores locales y pan artesanal.' },
+        { name: 'Pizzas', description: 'Pizzas artesanales con masa casera, preparadas con ingredientes frescos del campo.' },
+        { name: 'Empanadas', description: ' Tradicionales empanadas argentinas de rellenos variados.' },
+        { name: 'Hamburguesas', description: 'Jugosas hamburguesas con carne de la mejor calidad, acompañadas de vegetales frescos.' },
       ],
     },
     {
@@ -153,7 +153,7 @@ const MenuPage = () => {
     />
                     <div className="p-6">
                       <h4 className="text-2xl font-semibold text-[#622121] mb-2">{item.name}</h4>
-                      <p className="text-[#622121]/90">Descripción deliciosa de {item.name.toLowerCase()}</p>
+                      <p className="text-[#622121]/90">{item.description}</p>
                     </div>
                   </motion.div>
                 ))}
