@@ -1,5 +1,5 @@
 
-import Events from "./components/Events";
+import Gorostiaga from "./components/Gorostiaga";
 import LocationMap from "./components/LocationMap";
 import MenuHome from "./components/MenuHome";
 import Testimonials from "./components/Testimonials";
@@ -15,7 +15,7 @@ export default function Home() {
     <div>
       <RestaurantHero />
       <TextBanner />
-      <Events />
+      <Gorostiaga />
       <MenuHome />
       <ReserveGuide />
       <Gallery />
