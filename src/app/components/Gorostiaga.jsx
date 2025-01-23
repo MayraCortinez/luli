@@ -42,7 +42,7 @@ const Events = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <Image
-                src="/imageFriends.jpg"
+                src="/images/imageFriends.jpg"
                 width={550}
                 height={310}
                 alt="Restaurant Dish"
